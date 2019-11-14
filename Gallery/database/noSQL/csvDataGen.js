@@ -1,6 +1,6 @@
 const faker = require('faker');
 const fs = require('fs');
-const writeUsers = fs.createWriteStream('mongoTest.csv');
+const writeUsers = fs.createWriteStream('mongoTest.');
 writeUsers.write('id,url, description, verify\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {

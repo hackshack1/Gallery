@@ -1,6 +1,6 @@
 require('newrelic')
 const mongoose = require('mongoose');
-const db = require('../database/index.js.js');
+const db = require('../database/index.js');
 
 module.exports = {
   getAll: function(callback) {
