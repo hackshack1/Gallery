@@ -4,8 +4,8 @@ const writeUsers = fs.createWriteStream('seedMongo.json');
 writeUsers.write('\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
-    let i = 2500000;
-    let id = 0;
+    let i = 5000000;
+    let id = 2500000;
     let count = 1;
     function write() {
       let ok = true;
