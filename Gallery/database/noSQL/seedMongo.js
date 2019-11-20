@@ -4,7 +4,7 @@ const writeUsers = fs.createWriteStream('seedMongo.json');
 writeUsers.write('\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
-    let i = 10000000;
+    let i = 2500000;
     let id = 0;
     let count = 1;
     function write() {
@@ -48,8 +48,8 @@ function writeTenMillionUsers(writer, encoding, callback) {
             ]
         };
         var jsonContent = JSON.stringify(data);
-        if(id % 1000000 === 0){
-          console.log(id/1000000 * 100);
+        if(id % 500000 === 0){
+          console.log(id/500000 * 10);
         }
         if (i === 0) {
           writer.write(jsonContent, encoding, callback);
