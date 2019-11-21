@@ -4,9 +4,9 @@ const writeUsers = fs.createWriteStream('seedMongo.json');
 writeUsers.write('\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
-    let i = 100;
-    let id = 5000001;
-    let count = 1;
+    let i = 5000000;
+    let id = 5000000;
+    let count = 25000000;
     function write() {
       let ok = true;
       do {
@@ -19,7 +19,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
           listingId: id,
             images:[
               {
-               [count]:{
+               [count++]:{
                   url: url,
                   description: faker.lorem.sentences(),
                   verification: verify
